@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-zinc-50 text-zinc-900 antialiased;
+    @apply dark:bg-zinc-950 dark:text-zinc-100;
+  }
+
+  * {
+    @apply border-zinc-200 dark:border-zinc-800;
+  }
+}
+
+@layer components {
+  .minecraft-text {
+    font-family: 'Minecraft', 'JetBrains Mono', monospace;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.zinc.400') transparent;
+  }
+}
