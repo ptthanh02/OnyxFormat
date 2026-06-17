@@ -5,8 +5,6 @@ A modern text formatting tool designed for Minecraft server administrators and c
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-blue)](https://ptthanh02.github.io/OnyxFormat)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-<img width="1902" height="914" alt="OnyxFormat Interface" src="https://github.com/user-attachments/assets/a2797ca8-ecd4-4e97-b217-fe759c633102" />
-
 ## Features
 
 ### Small Caps Converter
