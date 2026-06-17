@@ -8,12 +8,12 @@
   }
 
   body {
-    @apply bg-zinc-50 text-zinc-900 antialiased;
-    @apply dark:bg-zinc-950 dark:text-zinc-100;
+    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply dark:bg-slate-950 dark:text-slate-100;
   }
 
   * {
-    @apply border-zinc-200 dark:border-zinc-800;
+    @apply border-slate-200 dark:border-slate-800;
   }
 }
 
@@ -27,6 +27,6 @@
 @layer utilities {
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: theme('colors.zinc.400') transparent;
+    scrollbar-color: theme('colors.slate.400') transparent;
   }
 }

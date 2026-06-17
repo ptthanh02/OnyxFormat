@@ -60,8 +60,8 @@ export default function SkinCheckerPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Skin Checker</h1>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">View any Minecraft player's skin and download it instantly</p>
+        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Skin Checker</h1>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">View any Minecraft player's skin and download it instantly</p>
       </div>
 
       {/* Search */}
@@ -74,7 +74,7 @@ export default function SkinCheckerPage() {
             onKeyDown={e => e.key === 'Enter' && search()}
             placeholder="Enter Minecraft username..."
             maxLength={16}
-            className="flex-1 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-violet-500 dark:focus:ring-violet-400 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500"
+            className="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-violet-500 dark:focus:ring-violet-400 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"
           />
           <button
             onClick={search}
@@ -89,14 +89,14 @@ export default function SkinCheckerPage() {
             ) : 'Search'}
           </button>
         </div>
-        <p className="mt-2 text-xs text-zinc-400 dark:text-zinc-500">Java Edition only</p>
+        <p className="mt-2 text-xs text-slate-400 dark:text-slate-500">Java Edition only</p>
       </Card>
 
       {/* Error */}
       {error && !loading && (
         <Card className="p-6 text-center">
-          <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">{error.errorTitle}</p>
-          <p className="text-xs text-zinc-400 dark:text-zinc-500">{error.errorMessage}</p>
+          <p className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">{error.errorTitle}</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500">{error.errorMessage}</p>
         </Card>
       )}
 
@@ -113,8 +113,8 @@ export default function SkinCheckerPage() {
                 style={{ imageRendering: 'pixelated' }}
               />
               <div className="flex-1 min-w-0">
-                <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">{player.playerData.name}</h2>
-                <p className="text-xs text-zinc-400 dark:text-zinc-500 font-mono truncate mt-0.5">{player.playerData.id}</p>
+                <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">{player.playerData.name}</h2>
+                <p className="text-xs text-slate-400 dark:text-slate-500 font-mono truncate mt-0.5">{player.playerData.id}</p>
                 <div className="mt-2 flex items-center gap-2">
                   <Badge variant={player.skinInfo.skinType === 'alex' ? 'violet' : 'default'}>
                     {player.skinInfo.skinType === 'alex' ? 'Alex (Slim)' : 'Steve (Classic)'}
@@ -129,10 +129,10 @@ export default function SkinCheckerPage() {
           <div className="grid md:grid-cols-2 gap-4">
             <Card className="p-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Full Skin</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Full Skin</span>
                 <Badge>2D View</Badge>
               </div>
-              <div className="flex justify-center bg-zinc-100 dark:bg-zinc-800 rounded-lg p-4">
+              <div className="flex justify-center bg-slate-100 dark:bg-slate-800 rounded-lg p-4">
                 <img
                   src={player.skinInfo.skinUrl}
                   alt="Full Skin"
@@ -153,15 +153,15 @@ export default function SkinCheckerPage() {
 
             <Card className="p-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">3D Preview</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">3D Preview</span>
                 <Badge variant="violet">Interactive</Badge>
               </div>
-              <div className="bg-zinc-800 dark:bg-zinc-900 rounded-lg overflow-hidden">
-                <Suspense fallback={<div className="h-[280px] flex items-center justify-center text-zinc-400 text-sm">Loading 3D viewer...</div>}>
+              <div className="bg-slate-800 dark:bg-slate-900 rounded-lg overflow-hidden">
+                <Suspense fallback={<div className="h-[280px] flex items-center justify-center text-slate-400 text-sm">Loading 3D viewer...</div>}>
                   <ModelViewer skinUrl={player.skinInfo.skinUrl} />
                 </Suspense>
               </div>
-              <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2 text-center">
+              <p className="text-xs text-slate-400 dark:text-slate-500 mt-2 text-center">
                 Drag to rotate · Scroll to zoom
               </p>
             </Card>
@@ -170,7 +170,7 @@ export default function SkinCheckerPage() {
           {/* Color palette */}
           {colors.length > 0 && (
             <Card className="p-4">
-              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3">Skin Colors</p>
+              <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Skin Colors</p>
               <div className="flex flex-wrap gap-2">
                 {colors.map(color => (
                   <button
@@ -180,7 +180,7 @@ export default function SkinCheckerPage() {
                       await navigator.clipboard.writeText(color)
                       toast.success(`Copied ${color}`)
                     }}
-                    className="group relative w-8 h-8 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:scale-110 transition-transform"
+                    className="group relative w-8 h-8 rounded-lg border border-slate-200 dark:border-slate-700 hover:scale-110 transition-transform"
                     style={{ backgroundColor: color }}
                   >
                     <span className="sr-only">{color}</span>

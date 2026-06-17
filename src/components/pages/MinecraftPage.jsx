@@ -15,20 +15,20 @@ export default function MinecraftPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Minecraft Colors</h1>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Create colorful Minecraft text with custom hex colors and gradients</p>
+        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Minecraft Colors</h1>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Create colorful Minecraft text with custom hex colors and gradients</p>
       </div>
 
       {/* Tab switcher */}
-      <div className="flex gap-1 bg-zinc-100 dark:bg-zinc-800/60 p-1 rounded-xl w-fit">
+      <div className="flex gap-1 bg-slate-100 dark:bg-slate-800/60 p-1 rounded-xl w-fit">
         {TABS.map(({ id, label }) => (
           <button
             key={id}
             onClick={() => setActiveTab(id)}
             className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200
               ${activeTab === id
-                ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 shadow-sm'
-                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'
+                ? 'bg-white dark:bg-slate-900 text-violet-700 dark:text-violet-300 shadow-sm'
+                : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'
               }`}
           >
             {label}

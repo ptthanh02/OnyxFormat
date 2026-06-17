@@ -29,8 +29,8 @@ export default function AboutPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">About OnyxFormat</h1>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">About OnyxFormat</h1>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
           Professional text formatting tools for Minecraft server owners and content creators.
         </p>
       </div>
@@ -39,17 +39,17 @@ export default function AboutPage() {
         {FEATURES.map(({ title, desc }) => (
           <div
             key={title}
-            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
+            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-violet-200 dark:hover:border-violet-800 transition-colors"
           >
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-2">{title}</h3>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{desc}</p>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">{title}</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 text-center">
-        <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-1">Open Source</h3>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+      <div className="bg-violet-50 dark:bg-violet-950/30 border border-violet-100 dark:border-violet-900/50 rounded-xl p-6 text-center">
+        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">Open Source</h3>
+        <p className="text-sm text-slate-500 dark:text-slate-400">
           OnyxFormat is open source and hosted on GitHub Pages. No data is collected or stored.
         </p>
       </div>
