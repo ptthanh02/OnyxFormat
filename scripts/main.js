@@ -1,4 +1,4 @@
-/* MineStyle - Enhanced Main JavaScript */
+﻿/* OnyxFormat - Enhanced Main JavaScript */
 
 // Unicode small caps mapping
 const smallCapsMap = {
@@ -55,10 +55,10 @@ let lastMouseY = 0;
 // Enhanced preset templates with more variety
 const presetTemplates = {
     welcome: '§e✨ §bWelcome to §a§lOur Server§r§e! §6Enjoy your stay! §e✨',
-    error: '§c§l❌ [ERROR]§r §cSomething went wrong! Please try again.',
-    success: '§a§l✅ [SUCCESS]§r §aAction completed successfully!',
-    warning: '§6§l⚠️ [WARNING]§r §6Please be careful with this action.',
-    info: '§b§lℹ️ [INFO]§r §bHere is some important information.',
+    error: '§c§l [ERROR]§r §cSomething went wrong! Please try again.',
+    success: '§a§l [SUCCESS]§r §aAction completed successfully!',
+    warning: '§6§l [WARNING]§r §6Please be careful with this action.',
+    info: '§b§l [INFO]§r §bHere is some important information.',
     rainbow: '§cR§6a§ei§an§bb§9o§dw §cT§6e§ex§at'
 };
 
@@ -656,7 +656,7 @@ function copyText(outputId) {
             const originalText = button.textContent;
             const originalBg = button.style.background;
             
-            button.textContent = '✅ Copied!';
+            button.textContent = ' Copied!';
             button.classList.add('copied');
             button.style.background = 'linear-gradient(135deg, #11998e, #38ef7d)';
             
@@ -679,7 +679,7 @@ function copyText(outputId) {
             showToast('Text copied to clipboard!', 'success');
         } else {
             // Error feedback
-            button.textContent = '❌ Failed';
+            button.textContent = ' Failed';
             button.style.background = 'linear-gradient(135deg, #ff6b6b, #ee5a24)';
             hapticFeedback.heavy();
             
@@ -1039,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show welcome toast
     setTimeout(() => {
-        showToast('Welcome to MineStyle! 🎨', 'info');
+        showToast('Welcome to OnyxFormat', 'info');
     }, 1000);
 });
 
@@ -1634,7 +1634,7 @@ async function fetchWithTimeout(url, timeout = 10000) {
             signal: controller.signal,
             headers: {
                 'Accept': 'application/json',
-                'User-Agent': 'MineStyle-SkinChecker/1.0'
+                'User-Agent': 'OnyxFormat-SkinChecker/1.0'
             }
         });
         clearTimeout(timeoutId);

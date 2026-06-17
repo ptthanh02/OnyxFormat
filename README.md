@@ -1,64 +1,66 @@
-# MineStyle 🎨⛏️
+﻿# OnyxFormat
 
-A modern text formatting tool for Minecraft server creators and content writers. Transform plain text into elegant small caps or vibrant Minecraft color codes with an intuitive, professional interface.
+A modern text formatting tool designed for Minecraft server administrators and content creators. OnyxFormat transforms plain text into elegant small caps or vibrant Minecraft color codes through an intuitive and professional interface.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-blue)](https://ptthanh02.github.io/minestyle)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-blue)](https://ptthanh02.github.io/OnyxFormat)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-<img width="1902" height="914" alt="image" src="https://github.com/user-attachments/assets/a2797ca8-ecd4-4e97-b217-fe759c633102" />
+<img width="1902" height="914" alt="OnyxFormat Interface" src="https://github.com/user-attachments/assets/a2797ca8-ecd4-4e97-b217-fe759c633102" />
 
-## 🌟 Features
+## Features
 
-### 📝 Small Caps Converter
-- **Unicode Small Caps**: Universal format that works everywhere
-- **CSS Small Caps**: Web-optimized formatting for websites
-- Live preview and one-click copy functionality
+### Small Caps Converter
+- **Unicode Small Caps**: Universal format compatible across all platforms
+- **CSS Small Caps**: Web-optimized formatting for seamless website integration
+- Real-time preview and one-click copy functionality
 
-### ⛏️ Minecraft Text Formatting
-- Complete color palette with all 16 standard Minecraft colors
-- Custom hex color support with visual color picker
-- Text formatting options: bold, italic, underline, strikethrough, magic text
-- Professional quick presets (Server Welcome, Error, Success, etc.)
+### Minecraft Text Formatting
+- Comprehensive color palette featuring all 16 standard Minecraft colors
+- Custom hex color support with an integrated visual color picker
+- Advanced text styling options including bold, italic, underline, strikethrough, and obfuscated text
+- Professional formatting presets (e.g., Server Welcome, Error, Success)
 - Advanced gradient text generator
-- Live Minecraft preview showing exactly how text appears in-game
+- Real-time Minecraft preview demonstrating exact in-game text rendering
 
-## 🚀 Quick Start
+## Quick Start
 
-1. **Visit**: [https://ptthanh02.github.io/minestyle](https://ptthanh02.github.io/minestyle)
-2. **Choose** your formatting tool from the navigation menu
-3. **Type** your text and apply colors/formatting
-4. **Copy** the formatted result with one click
-5. **Paste** into your Minecraft server, social media, or documents
+1. **Access the Application**: Visit [https://ptthanh02.github.io/OnyxFormat](https://ptthanh02.github.io/OnyxFormat)
+2. **Select a Tool**: Choose your desired formatting utility from the navigation menu
+3. **Configure**: Input your text and apply the preferred colors or formatting styles
+4. **Export**: Copy the formatted output directly to your clipboard
+5. **Deploy**: Paste the result into your Minecraft server configuration, social media, or documentation
 
-## 💻 Local Development
+## Local Development
+
+To run the project locally for development or testing purposes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ptthanh02/minestyle.git
-cd MineStyle
+git clone https://github.com/ptthanh02/OnyxFormat.git
+cd OnyxFormat
 
-# Start a local server
+# Start a local development server
 python -m http.server 8000
-# OR
+# Alternatively, using Node.js:
 npx serve .
 
-# Visit http://localhost:8000
+# Access the application at http://localhost:8000
 ```
 
-## 🎯 Use Cases
+## Use Cases
 
-**Minecraft Servers**: Create colorful MOTD messages, announcements, and plugin text
-**Content Creation**: Generate elegant small caps for social media and documents  
-**Development**: Format text for Minecraft plugins and server configurations
+- **Minecraft Server Administration**: Design colorful MOTD messages, server announcements, and plugin configurations.
+- **Content Creation**: Generate refined small caps typography for social media profiles and official documents.
+- **Software Development**: Format text assets for custom Minecraft plugins and server configuration files.
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
+Contributions are highly encouraged. Please review the existing codebase, submit detailed issue reports for bugs or feature requests, and open pull requests for proposed changes.
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. For detailed information, please refer to the [LICENSE](LICENSE) file.
 
 ---
 
-**Made with ❤️ for the Minecraft community**
+*Developed for the Minecraft community.*
