@@ -3,13 +3,11 @@ import { Toaster } from 'sonner'
 import Navbar from './components/layout/Navbar.jsx'
 import SmallCapsPage from './components/pages/SmallCapsPage.jsx'
 import MinecraftPage from './components/pages/MinecraftPage.jsx'
-import SkinCheckerPage from './components/pages/SkinCheckerPage.jsx'
 import AboutPage from './components/pages/AboutPage.jsx'
 
 const PAGES = {
   smallcaps: SmallCapsPage,
   minecraft: MinecraftPage,
-  skinchecker: SkinCheckerPage,
   about: AboutPage,
 }
 
@@ -30,7 +28,7 @@ export default function App() {
         }}
       />
       <Navbar activePage={activePage} onNavigate={setActivePage} />
-      <main className="max-w-5xl mx-auto px-4 py-8">
+      <main className="max-w-5xl mx-auto px-4 py-10">
         <ActivePage />
       </main>
     </div>

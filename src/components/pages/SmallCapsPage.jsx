@@ -11,26 +11,26 @@ export default function SmallCapsPage() {
   const css = input || ''
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Small Caps</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Transform your text into elegant small caps format</p>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">Small Caps</h1>
+        <p className="mt-2 text-base text-slate-500 dark:text-slate-400">Transform your text into elegant small caps format</p>
       </div>
 
       {/* Input */}
-      <Card className="p-4">
-        <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">
+      <Card className="p-6">
+        <label className="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-widest">
           Input Text
         </label>
         <textarea
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Type something here..."
-          rows={3}
-          className="w-full bg-transparent text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-sm resize-none outline-none"
+          rows={4}
+          className="w-full bg-transparent text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-base resize-none outline-none leading-relaxed"
         />
         {input && (
-          <div className="mt-2 pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+          <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-end">
             <button
               onClick={() => setInput('')}
               className="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
@@ -42,7 +42,7 @@ export default function SmallCapsPage() {
       </Card>
 
       {/* Outputs */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-5">
         <OutputCard
           title="Unicode Small Caps"
           badge={<Badge>Universal</Badge>}
@@ -52,7 +52,7 @@ export default function SmallCapsPage() {
         />
         <OutputCard
           title="CSS Small Caps"
-          badge={<Badge variant="violet">Web Only</Badge>}
+          badge={<Badge variant="blue">Web Only</Badge>}
           content={css}
           placeholder="CSS styled small caps will appear here..."
           description="Uses CSS font-variant — works on websites but may not paste correctly elsewhere."
@@ -65,17 +65,17 @@ export default function SmallCapsPage() {
 
 function OutputCard({ title, badge, content, placeholder, description, className = '' }) {
   return (
-    <Card className="p-4 flex flex-col gap-3">
+    <Card className="p-6 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{title}</span>
+          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{title}</span>
           {badge}
         </div>
         {content && <CopyButton getText={() => content} />}
       </div>
 
       <div
-        className={`min-h-[60px] text-sm leading-relaxed ${
+        className={`min-h-[72px] text-base leading-relaxed ${
           content
             ? 'text-slate-900 dark:text-slate-100'
             : 'text-slate-400 dark:text-slate-600'
@@ -85,7 +85,7 @@ function OutputCard({ title, badge, content, placeholder, description, className
         {content || placeholder}
       </div>
 
-      <p className="text-xs text-slate-400 dark:text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-3">
+      <p className="text-xs text-slate-400 dark:text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
         {description}
       </p>
     </Card>

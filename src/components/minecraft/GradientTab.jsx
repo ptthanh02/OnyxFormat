@@ -36,10 +36,10 @@ export default function GradientTab() {
   const { preview, code } = generateGradient(text, startColor, endColor, format)
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       {/* Controls */}
-      <Card className="p-4">
-        <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Gradient Settings</p>
+      <Card className="p-6">
+        <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-4">Gradient Settings</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="text"
@@ -47,7 +47,7 @@ export default function GradientTab() {
             onChange={e => setText(e.target.value.slice(0, 50))}
             placeholder="Enter text for gradient..."
             maxLength={50}
-            className="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-violet-500 dark:focus:ring-violet-400 text-slate-900 dark:text-slate-100"
+            className="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-slate-900 dark:text-slate-100"
           />
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export default function GradientTab() {
                 type="color"
                 value={startColor}
                 onChange={e => setStartColor(e.target.value)}
-                className="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer bg-transparent"
+                className="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer bg-transparent"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export default function GradientTab() {
                 type="color"
                 value={endColor}
                 onChange={e => setEndColor(e.target.value)}
-                className="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer bg-transparent"
+                className="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer bg-transparent"
               />
             </div>
           </div>
@@ -74,20 +74,20 @@ export default function GradientTab() {
         {/* Gradient bar preview */}
         {text && (
           <div
-            className="mt-3 h-2 rounded-full"
+            className="mt-4 h-2.5 rounded-full"
             style={{ background: `linear-gradient(to right, ${startColor}, ${endColor})` }}
           />
         )}
       </Card>
 
       {/* Preview + Code */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <Card className="p-4">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Gradient Preview</span>
+      <div className="grid md:grid-cols-2 gap-5">
+        <Card className="p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Gradient Preview</span>
             <Badge>Live</Badge>
           </div>
-          <div className="min-h-[48px] bg-zinc-950 rounded-lg p-3 font-mono text-sm">
+          <div className="min-h-[56px] bg-zinc-950 rounded-xl p-4 font-mono text-sm">
             {preview.length > 0 ? (
               preview.map((s, i) => (
                 <span key={i} style={s.color ? { color: s.color } : undefined}>
@@ -100,17 +100,17 @@ export default function GradientTab() {
           </div>
         </Card>
 
-        <Card className="p-4">
-          <div className="flex items-center justify-between mb-3">
+        <Card className="p-6">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Code</span>
+              <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Code</span>
               <Badge variant="green">Game Ready</Badge>
             </div>
             <div className="flex items-center gap-2">
               <select
                 value={format}
                 onChange={e => setFormat(e.target.value)}
-                className="text-xs bg-slate-100 dark:bg-slate-800 border-0 rounded-md px-2 py-1 text-slate-600 dark:text-slate-400 outline-none cursor-pointer"
+                className="text-xs bg-slate-100 dark:bg-slate-800 border-0 rounded-lg px-2.5 py-1.5 text-slate-600 dark:text-slate-400 outline-none cursor-pointer"
               >
                 <option value="&">&amp; Format</option>
                 <option value="§">§ Format</option>
@@ -118,7 +118,7 @@ export default function GradientTab() {
               {code && <CopyButton getText={() => code} />}
             </div>
           </div>
-          <div className="min-h-[48px] font-mono text-xs text-slate-600 dark:text-slate-400 break-all">
+          <div className="min-h-[56px] font-mono text-sm text-slate-600 dark:text-slate-400 break-all">
             {code || <span className="text-slate-400 dark:text-slate-600">Gradient codes will appear here...</span>}
           </div>
         </Card>

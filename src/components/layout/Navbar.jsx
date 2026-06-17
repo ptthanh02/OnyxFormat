@@ -1,9 +1,9 @@
 import { useState } from 'react'
+import Logo from '../ui/Logo.jsx'
 
 const NAV_ITEMS = [
   { id: 'smallcaps', label: 'Small Caps' },
   { id: 'minecraft', label: 'Minecraft' },
-  { id: 'skinchecker', label: 'Skin Checker' },
   { id: 'about', label: 'About' },
 ]
 
@@ -11,14 +11,17 @@ export default function Navbar({ activePage, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-      <nav className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+      <nav className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => { onNavigate('smallcaps'); setMenuOpen(false) }}
-          className="text-sm font-semibold tracking-tight text-slate-900 dark:text-slate-100 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+          className="flex items-center gap-2.5 group"
         >
-          OnyxFormat
+          <Logo size={26} />
+          <span className="text-base font-bold tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            OnyxFormat
+          </span>
         </button>
 
         {/* Desktop nav */}
@@ -27,9 +30,9 @@ export default function Navbar({ activePage, onNavigate }) {
             <li key={id}>
               <button
                 onClick={() => onNavigate(id)}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
                   ${activePage === id
-                    ? 'bg-violet-50 dark:bg-violet-900/25 text-violet-700 dark:text-violet-300'
+                    ? 'bg-blue-50 dark:bg-blue-900/25 text-blue-700 dark:text-blue-300'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800'
                   }`}
               >
@@ -59,14 +62,14 @@ export default function Navbar({ activePage, onNavigate }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-2">
+        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-3">
           {NAV_ITEMS.map(({ id, label }) => (
             <button
               key={id}
               onClick={() => { onNavigate(id); setMenuOpen(false) }}
-              className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
+              className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors
                 ${activePage === id
-                  ? 'bg-violet-50 dark:bg-violet-900/25 text-violet-700 dark:text-violet-300'
+                  ? 'bg-blue-50 dark:bg-blue-900/25 text-blue-700 dark:text-blue-300'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
                 }`}
             >
